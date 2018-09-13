@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="fibonacci(prompt('Số lượng fibonacci'))"> Số lượng fibonacci</button><br>
+<div id="output"></div>
+  <script>
+      function fibonacci(n) {
+          let num1 = 0;
+          let num2 = 1;
+          let num = 1;
+          let num3 = num1 + num2;
+          let write = "";
+          let i = 0;
+          while (i < n) {
+              i++;
+              num3 = num1 + num2;
+              write += " " + num3;
+              num1 = num2;
+              num2 = num3;
+          }
+          document.getElementById("output").innerHTML = write;
+      }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>666666</title>
+</head>
+<body>
+<button type="button" onclick="hihi(prompt('NHap so so tu nhien'))">Chia het cho 3 va 5??</button><br>
+<div id="output"></div>
+<script>
+    function hihi(n){
+        let i = 0;
+        let write = "";
+        for (i; i <n ; i++){
+            if(i % 3 === 0){
+                if(i % 5 === 0){
+                    document.write("FizzBuzz <br/>");
+                }else{
+                    document.write("Fizz <br/>");
+                }
+            }else if ( i % 5 ===0){
+                document.write("Buzz <br/>");
+            }else {document.write(i +"<br/>");}
+            //alert(i )
+        }
+    }
+
+</script>
+</body>
+</html>

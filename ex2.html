@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<table>
+    <b>In "n" so  fibonacci nhap tu frompt()</b>
+    <tr>
+        <td><input id="num" type="number">
+        <td><input type="button" value=" Click để Kết quả" onclick="Luachon()"> </td>
+    </tr>
+</table>
+<b>Ket qua: </b><output id="output"></output>
+
+
+  <script>
+      function Luachon() {
+          let a = document.getElementById("num");
+          num = parseInt(a.value);
+          var fibonacci_series = function (n)
+          {
+              if (n===1)
+              {
+                  return [0, 1];
+              }
+              else
+              {
+                  var s = fibonacci_series(n - 1);
+                  s.push(s[s.length - 1] + s[s.length - 2]);
+                  return s;
+              }
+          };
+
+          document.getElementById("output").innerHTML=fibonacci_series(num);
+
+      }
+
+
+
+
+  </script>
+
+</body>
+</html>
