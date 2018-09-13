@@ -5,6 +5,28 @@
     <title>Title</title>
 </head>
 <body>
-
+<td>
+    <button type="button" onclick="divide7(parseInt(prompt('Input amount of number:')),prompt('Divided number:'))">Bài 6: Tổng các số chia hết cho 1 số</button>
+</td>
+<output id="output"></output>
+  <script>
+      function divide7(n,a){
+          let sum = 0;
+          let count =0;
+          let i = 0;
+          let write= 0;
+          let write1="";
+          while (count < n){
+              i++;
+              if(i % a === 0){
+                  count++;
+                  sum = sum + i;
+                  //alert(i + ", count = " + count + " sum = " + sum); //Dùng alert kiểm tra
+              }
+              write += sum;
+          }write1 += "Tổng của " + n + " số chia hết cho " + a + " là: " +write;
+          document.getElementById("output").innerHTML = write1;
+      }
+  </script>
 </body>
 </html>
